@@ -3,13 +3,13 @@ name: publish site
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      DEPLOY_BRANCH: gh-pages
+      DEPLOY_BRANCH: master
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
