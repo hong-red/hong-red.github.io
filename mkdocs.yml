@@ -1,0 +1,84 @@
+# 基本信息
+site_name: 范潇麟的个人网站
+site_url: https://hong-red.github.io 
+site_author: 范潇麟
+site_description: 范潇麟的个人网站
+# 导航栏配置
+nav:
+  - 博客:
+      - 博客首页: BLOG/index.md
+      - 搭建博客: BLOG/create.md
+  - Linux:
+      - Linux: LINUX/index.md
+      - 虚拟机的搭建: LINUX/create.md
+      - vim的使用: LINUX/vim.md
+  - GITHUB:
+      - GITHUB: GITHUB/index.md
+  - C:
+      - C: C/index.md
+  - 兴趣: LIKE/index.md
+
+
+
+# 插件扩展
+plugins:
+  - search
+
+# 主题和UI配置
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: orange
+      toggle:
+        icon: material/weather-night
+        name: 切换至夜间模式
+    - scheme: slate
+      primary: indigo
+      accent: orange
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至日间模式
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.indexes
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+
+# 编辑和链接配置
+edit_uri: edit/main/docs
+repo_url: https://github.com/hong-red/hong-red.github.io
+repo_name: hong-red.github.io
+
+# 版权声明配置
+copyright: Copyright &copy; 2025 范潇麟
+
+# Markdown扩展
+markdown_extensions:
+  - pymdownx.arithmatex
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - meta
+
+# 额外的JavaScript文件
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6  
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js 
+
+# 额外的CSS文件
+extra_css:
+  # - mkdocs/css/no-footer.css  # 注释掉或删除
+  # - mkdocs/css/unordered-list-symbols.css  # 注释掉或删除
+
+# 社交图标配置
+extra:
+  social:
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/354007086 
+      name: Bilibili | 红月的雨
+    - icon: fontawesome/brands/github
+      link: https://github.com/hong-red 
+      name: GitHub | hong-red
