@@ -5,9 +5,19 @@ site_author: 范潇麟
 site_description: 范潇麟的个人网站
 # 导航栏配置
 nav:
+
+  - 首页: index.md
+ 
   - 博客:
       - 博客首页: BLOG/index.md
       - 搭建博客: BLOG/create.md
+      
+  - 数学建模:
+      - 建模开始: mathbuild/index.md
+      - 资源准备: mathbuild/a.md
+      - 真题阶段: mathbuild/b.md
+ 
+      
   - Linux:
       - Linux: LINUX/index.md
       - 虚拟机的搭建: LINUX/create.md
