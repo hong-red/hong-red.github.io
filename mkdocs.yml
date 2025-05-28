@@ -11,7 +11,7 @@ nav:
   - 博客:
       - 博客首页: BLOG/index.md
       - 搭建博客: BLOG/create.md
-      
+      - 博客更新: BLOG/up.md
   - 数学建模:
       - 建模开始: mathbuild/index.md
       - 资源准备: mathbuild/a.md
