@@ -32,12 +32,12 @@ mkdocs serve
 ### 上传至 GitHub
 
 ```bash
-git status               # 查看变更
+
 git add .               
 git commit -m "Update blog post"
-git push origin main
-mkdocs build             # 可选，构建本地预览
-mkdocs gh-deploy         # （有自动部署，可不用）部署到 GitHub Pages
+bash auto-update-this-repo.sh 
+
+
 ```
 
 
