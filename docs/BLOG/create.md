@@ -65,10 +65,8 @@ jobs:
   
 1.建立一个公开的（只有公开的库才能直接用github的page进行部署），用户名与库      名相同的库（否则会出现404）
 
-2.回到虚拟机上，cd mkdocs-site (回到你的文档），使用
-```    
- mkdocs gh-deploy
-```
+2.回到虚拟机上，cd mkdocs-site (回到你的文档），上传到main.
+
 3.根据情况进行下一步，假如无报错，显示上传成功。回到github，你会发现多了     一个gp-gapes分支，跳过以下步骤，直接到4。
 
 假如报错，出现以下情况
@@ -87,11 +85,10 @@ Aborted with 2 configuration errors!
 python3 -m venv venv
 source venv/bin/activate
 pip install mkdocs-material pymdown-extensions
-mkdocs gh-deploy
 ```
 4.回到github,点击库的设置（settings),点击Pages，从Souce点Depioy from a branch,从Branch点gh-pages和/(root),点Save，等几分钟出现链接
 
-5.网站建好了,退出虚拟模式
+5.网站建好了,需要进入虚拟状态的要退出虚拟模式
 ```
 deactivate
 ```

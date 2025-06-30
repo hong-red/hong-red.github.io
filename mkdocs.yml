@@ -17,7 +17,6 @@ nav:
       - 资源准备: mathbuild/a.md
       - 真题阶段: mathbuild/b.md
  
-      
   - Linux:
       - Linux: LINUX/index.md
       - 虚拟机的搭建: LINUX/create.md
@@ -27,6 +26,9 @@ nav:
   - C:
       - C: C/index.md
   - 兴趣: LIKE/index.md
+
+  - PYTHON: 
+      - PYTHON: python/index.md
 
 
 
