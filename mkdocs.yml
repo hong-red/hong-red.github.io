@@ -30,8 +30,11 @@ nav:
   - PYTHON: 
       - PYTHON: python/index.md
 
-
-
+  - 微信小程序:
+      - 智享养老开发: MINAPP/blog-article.md
+      
+  - 网站开发:
+      - 文明回响 (Civilization Echo): WEB/project_blog.md
 # 插件扩展
 plugins:
   - search
