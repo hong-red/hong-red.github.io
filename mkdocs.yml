@@ -24,7 +24,7 @@ nav:
   - 数学建模:
       - 资源准备: mathbuild/a.md
       - 真题阶段: mathbuild/b.md
-      - LaTeX: mathbuild/LATEX/index.md
+      - LaTeX: mathbuild/LATEX/LaTeX.md
       - 论文示例: mathbuild/example.md
      
 
