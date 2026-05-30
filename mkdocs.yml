@@ -1,40 +1,45 @@
 # 基本信息
 site_name: 范潇麟的个人网站
-site_url: https://hong-red.github.io 
+site_url: https://hong-red.github.io
 site_author: 范潇麟
 site_description: 范潇麟的个人网站
+
 # 导航栏配置
 nav:
-
   - 首页: index.md
- 
-  - 博客:
-      - 博客首页: BLOG/index.md
-      - 搭建博客: BLOG/create.md
-      - 博客更新: BLOG/up.md
+
+  - 网站开发:
+      - 文明回响: WEB/project_blog.md
+      - 劳动维权帮助助手: WEB/labor-rights-helper.md
+      - 小世界记忆: WEB/memory-ai-companion.md
+
+  - 微信小程序:
+      - 智享养老: MINAPP/blog-article.md
+      - 周易小程序: MINAPP/zhouyi-miniapp.md
+
+  - AI 智能体:
+      - SQL 优化智能体: AIAGENT/sql-optimization-agent.md
+      - Hugging Face 部署指南: AIAGENT/huggingface-deploy-guide.md
+
   - 数学建模:
       - 建模开始: mathbuild/index.md
       - 资源准备: mathbuild/a.md
       - 真题阶段: mathbuild/b.md
- 
-  - Linux:
-      - Linux: LINUX/index.md
-      - 虚拟机的搭建: LINUX/create.md
-      - vim的使用: LINUX/vim.md
-  - GITHUB:
-      - GITHUB: GITHUB/index.md
-  - C:
-      - C: C/index.md
-  - 兴趣: LIKE/index.md
+      - 论文示例: mathbuild/example.md
+      - LaTeX: mathbuild/LATEX/index.md
 
-  - PYTHON: 
-      - PYTHON: python/index.md
+  - 技术笔记:
+      - Linux: TECH/LINUX/index.md
+      - 虚拟机的搭建: TECH/LINUX/create.md
+      - vim的使用: TECH/LINUX/vim.md
+      - Python: TECH/python/index.md
+      - 博客首页: TECH/BLOG/index.md
+      - 搭建博客: TECH/BLOG/create.md
+      - 博客更新: TECH/BLOG/up.md
 
-  - 微信小程序:
-      - 智享养老开发: MINAPP/blog-article.md
-      
-  - 网站开发:
-      - 文明回响 (Civilization Echo): WEB/project_blog.md
+  - YOLO:
+      - YOLO11n: YOLO/index.md
+
 # 插件扩展
 plugins:
   - search
@@ -80,8 +85,8 @@ markdown_extensions:
 
 # 额外的JavaScript文件
 extra_javascript:
-  - https://polyfill.io/v3/polyfill.min.js?features=es6  
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js 
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 # 额外的CSS文件
 extra_css:
@@ -92,8 +97,8 @@ extra_css:
 extra:
   social:
     - icon: fontawesome/brands/bilibili
-      link: https://space.bilibili.com/354007086 
+      link: https://space.bilibili.com/354007086
       name: Bilibili | 红月的雨
     - icon: fontawesome/brands/github
-      link: https://github.com/hong-red 
+      link: https://github.com/hong-red
       name: GitHub | hong-red
