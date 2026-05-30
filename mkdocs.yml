@@ -18,22 +18,20 @@ nav:
       - 周易小程序: MINAPP/zhouyi-miniapp.md
 
   - AI 智能体:
-      - SQL 优化智能体: AIAGENT/sql-optimization-agent.md
       - Hugging Face 部署指南: AIAGENT/huggingface-deploy-guide.md
+      - SQL 优化智能体: AIAGENT/sql-optimization-agent.md
 
   - 数学建模:
-      - 建模开始: mathbuild/index.md
       - 资源准备: mathbuild/a.md
       - 真题阶段: mathbuild/b.md
-      - 论文示例: mathbuild/example.md
       - LaTeX: mathbuild/LATEX/index.md
+      - 论文示例: mathbuild/example.md
+     
 
   - 技术笔记:
-      - Linux: TECH/LINUX/index.md
+      - Python: TECH/python/index.md
       - 虚拟机的搭建: TECH/LINUX/create.md
       - vim的使用: TECH/LINUX/vim.md
-      - Python: TECH/python/index.md
-      - 博客首页: TECH/BLOG/index.md
       - 搭建博客: TECH/BLOG/create.md
       - 博客更新: TECH/BLOG/up.md
 

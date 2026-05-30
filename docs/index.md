@@ -23,8 +23,8 @@
 
 | 项目 | 说明 | 链接 |
 |------|------|------|
-| SQL 优化智能体 | 数据库 SQL 优化 AI Agent | [查看](./AIAGENT/sql-optimization-agent.md) |
 | Hugging Face 部署指南 | Spaces 部署教程 | [查看](./AIAGENT/huggingface-deploy-guide.md) |
+| SQL 优化智能体 | 数据库 SQL 优化 AI Agent | [查看](./AIAGENT/sql-optimization-agent.md) |
 
 ## 数学建模
 
