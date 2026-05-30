@@ -29,7 +29,7 @@ nav:
      
 
   - 技术笔记:
-      - Python: TECH/python/index.md
+      - Python: TECH/python/python.md
       - 虚拟机的搭建: TECH/LINUX/create.md
       - vim的使用: TECH/LINUX/vim.md
       - 搭建博客: TECH/BLOG/create.md

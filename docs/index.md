@@ -33,13 +33,13 @@
 | 资源准备 | Python 数学实践与建模资料 | [查看](./mathbuild/a.md) |
 | 真题阶段 | 历年赛题与算法汇总 | [查看](./mathbuild/b.md) |
 | 论文示例 | 房价预测研究论文 | [查看](./mathbuild/example.md) |
-| LaTeX | 论文排版与公式编辑 | [查看](./mathbuild/LATEX/index.md) |
+| LaTeX | 论文排版与公式编辑 | [查看](./mathbuild/latex/LaTeX.md) |
 
 ## 技术笔记
 
 | 分类 | 说明 | 链接 |
 |------|------|------|
-| Python | Python 学习笔记 | [进入](./TECH/python/) |
+| Python | Python 学习笔记 | [进入](./TECH/python/python.md) |
 | 虚拟机的搭建 | VMware + Ubuntu 环境配置 | [查看](./TECH/LINUX/create.md) |
 | vim 的使用 | 常用命令与操作指南 | [查看](./TECH/LINUX/vim.md) |
 | 博客搭建 | GitHub + MkDocs 搭建过程 | [查看](./TECH/BLOG/create.md) |
