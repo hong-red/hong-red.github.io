@@ -167,9 +167,6 @@ class MultivariateARModel:
 ---
 
 ### 相关文件
-
-- [论文 PDF 文件](https://github.com/hong-red/hong-red.github.io/blob/main/docs/mathbuild/数学建模论文.pdf)
-- [论文 LaTeX 源码](https://github.com/hong-red/hong-red.github.io/blob/main/docs/mathbuild/数学建模论文.tex)
-
+- [数学建模资料库](https://github.com/hong-red/mathbuild)
 ---
 
