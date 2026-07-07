@@ -44,6 +44,7 @@
 | vim 的使用 | 常用命令与操作指南 | [查看](./TECH/LINUX/vim.md) |
 | 博客搭建 | GitHub + MkDocs 搭建过程 | [查看](./TECH/BLOG/create.md) |
 | 博客更新 | 新建主题与文章指南 | [查看](./TECH/BLOG/up.md) |
+| 免费域名绑定 | DigitalPlat + Cloudflare + GitHub Pages | [查看](./TECH/BLOG/domain-setup.md) |
 | YOLO | 目标检测学习 | [进入](./YOLO/) |
 
 ## 联系我
