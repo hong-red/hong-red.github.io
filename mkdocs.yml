@@ -67,6 +67,7 @@ theme:
     - navigation.expand
     - navigation.sections
     - navigation.path
+    - toc.integrate
     - search.suggest
     - search.highlight
     - search.share
