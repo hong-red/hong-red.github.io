@@ -91,3 +91,29 @@
   updateCursor(mouseX, mouseY);
   resetIdleTimer();
 })();
+
+// 汉堡菜单优化
+(function() {
+  'use strict';
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    var drawerToggle = document.querySelector('[data-md-toggle="drawer"]');
+    var drawerButton = document.querySelector('label[for="__drawer"]');
+    var overlay = document.querySelector('.md-overlay');
+    
+    // 优化菜单关闭功能
+    if (overlay) {
+      overlay.addEventListener('click', function() {
+        if (drawerToggle && drawerToggle.checked) {
+          drawerToggle.checked = false;
+        }
+      });
+    }
+    
+    // 确保菜单按钮可点击
+    if (drawerButton) {
+      drawerButton.style.pointerEvents = 'auto';
+      drawerButton.style.cursor = 'pointer';
+    }
+  });
+})();
