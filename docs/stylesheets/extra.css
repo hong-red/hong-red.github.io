@@ -1,0 +1,877 @@
+/* ============================================
+   文艺柔和风格 - 红月的雨
+   最终修复版
+   ============================================ */
+
+/* ============================================
+   1. 全局变量
+   ============================================ */
+:root {
+  --home-text: #1a202c;
+  --home-text-secondary: #2d3748;
+  --home-text-muted: #4a5568;
+  --home-border: rgba(0, 0, 0, 0.1);
+  --home-border-light: rgba(0, 0, 0, 0.06);
+  --home-surface: #ffffff;
+  --home-bg: #fafafa;
+  --home-bg-hover: #edf2f7;
+  --home-accent: #2b6cb0;
+  --home-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --home-shadow-md: 0 4px 14px rgba(0, 0, 0, 0.08);
+  --home-shadow-lg: 0 10px 28px rgba(0, 0, 0, 0.1);
+}
+
+[data-md-color-scheme="slate"] {
+  --home-text: #f7fafc;
+  --home-text-secondary: #e2e8f0;
+  --home-text-muted: #a0aec0;
+  --home-border: rgba(255, 255, 255, 0.1);
+  --home-border-light: rgba(255, 255, 255, 0.06);
+  --home-surface: #2d3748;
+  --home-bg: #1a202c;
+  --home-bg-hover: #4a5568;
+  --home-accent: #63b3ed;
+  --home-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25);
+  --home-shadow-md: 0 4px 14px rgba(0, 0, 0, 0.25);
+  --home-shadow-lg: 0 10px 28px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   2. 基础布局
+   ============================================ */
+body,
+[data-md-component="main"],
+.md-main {
+  background: var(--home-bg);
+}
+
+.md-content {
+  position: relative;
+  z-index: 1;
+}
+
+.md-main__inner {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch !important;
+}
+
+.md-content {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+/* ============================================
+   3. 首页背景（关键：移除负边距）
+   ============================================ */
+.home-page {
+  position: relative;
+  z-index: 0;
+  min-height: 100vh;
+  margin: 0 !important;
+  padding: 24px 24px 48px !important;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.home-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/anime/IMG_20260608_220238.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+.home-page::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.78);
+  z-index: -1;
+}
+
+[data-md-color-scheme="slate"] .home-page::after {
+  background: rgba(26, 32, 44, 0.84);
+}
+
+/* ============================================
+   4. 个人资料
+   ============================================ */
+.profile-section {
+  text-align: center;
+  padding: 56px 32px 44px;
+}
+
+.profile-section .avatar {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 24px;
+  box-shadow: var(--home-shadow-md);
+  border: 3px solid var(--home-surface);
+  transition: transform 0.3s ease;
+}
+
+.profile-section .avatar:hover {
+  transform: scale(1.05);
+}
+
+.profile-section h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--home-text);
+  margin-bottom: 12px;
+}
+
+.profile-section .title {
+  font-size: 1rem;
+  color: var(--home-text-secondary);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 18px;
+}
+
+.profile-section .description {
+  font-size: 0.95rem;
+  color: var(--home-text-muted);
+  font-weight: 500;
+  line-height: 1.8;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.profile-section .skills {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.profile-section .skill-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  color: var(--home-text-secondary);
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid var(--home-border);
+  border-radius: 20px;
+  transition: all 0.25s ease;
+}
+
+.profile-section .skill-tag:hover {
+  color: var(--home-accent);
+  background: var(--home-bg-hover);
+  border-color: var(--home-accent);
+  transform: translateY(-2px);
+}
+
+[data-md-color-scheme="slate"] .profile-section .skill-tag {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+[data-md-color-scheme="slate"] .profile-section .skill-tag:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   5. 项目卡片
+   ============================================ */
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 0 36px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.78);
+  border-radius: 14px;
+  padding: 26px;
+  box-shadow: var(--home-shadow-sm);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--home-shadow-lg);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+[data-md-color-scheme="slate"] .project-card {
+  background: rgba(45, 55, 72, 0.72);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-md-color-scheme="slate"] .project-card:hover {
+  background: rgba(45, 55, 72, 0.86);
+}
+
+.project-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--home-text);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--home-border-light);
+  letter-spacing: 0.03em;
+}
+
+.project-card .card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-card .card-links a {
+  font-size: 0.88rem;
+  color: var(--home-text-secondary);
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--home-border-light);
+  transition: all 0.2s ease;
+}
+
+.project-card .card-links a:hover {
+  color: var(--home-accent);
+  background: var(--home-bg-hover);
+  border-color: rgba(43, 108, 176, 0.25);
+  transform: translateY(-2px);
+}
+
+[data-md-color-scheme="slate"] .project-card .card-links a {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+[data-md-color-scheme="slate"] .project-card .card-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   6. 技术标签
+   ============================================ */
+.tech-tags {
+  text-align: center;
+  margin: 36px auto;
+  padding: 32px;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.78);
+  border-radius: 18px;
+  box-shadow: var(--home-shadow-sm);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+[data-md-color-scheme="slate"] .tech-tags {
+  background: rgba(45, 55, 72, 0.72);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.tech-tags a {
+  display: inline-block;
+  padding: 8px 18px;
+  margin: 6px;
+  font-size: 0.9rem;
+  color: var(--home-text-secondary);
+  font-weight: 600;
+  background: var(--home-bg);
+  border-radius: 24px;
+  border: 1px solid var(--home-border);
+  transition: all 0.25s ease;
+}
+
+.tech-tags a:hover {
+  color: var(--home-accent);
+  border-color: var(--home-accent);
+  background: var(--home-bg-hover);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   7. 页脚联系
+   ============================================ */
+.footer-contact {
+  text-align: center;
+  margin-top: 44px;
+  padding-top: 28px;
+  border-top: 1px solid var(--home-border);
+}
+
+.footer-contact .label {
+  font-size: 0.85rem;
+  color: var(--home-text-muted);
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-contact .links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-contact .links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  color: var(--home-text-secondary);
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid var(--home-border);
+  border-radius: 24px;
+  transition: all 0.25s ease;
+}
+
+.footer-contact .links a:hover {
+  color: var(--home-accent);
+  background: var(--home-bg-hover);
+  border-color: var(--home-accent);
+  transform: translateY(-2px);
+}
+
+[data-md-color-scheme="slate"] .footer-contact .links a {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+[data-md-color-scheme="slate"] .footer-contact .links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   8. 邮箱弹窗
+   ============================================ */
+.email-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.email-modal-content {
+  background: var(--home-surface);
+  padding: 32px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: var(--home-shadow-lg);
+  position: relative;
+  animation: fadeInUp 0.3s ease-out;
+  text-align: center;
+}
+
+.close-modal {
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--home-text-muted);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+  color: var(--home-text);
+}
+
+.email-modal-content h3 {
+  color: var(--home-text);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.03em;
+}
+
+.email-modal-content .email-address {
+  color: var(--home-text-secondary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding: 12px;
+  background: var(--home-bg);
+  border-radius: 8px;
+  border: 1px solid var(--home-border);
+}
+
+.email-modal-content .copy-btn {
+  background: var(--home-accent);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.email-modal-content .copy-btn:hover {
+  background: #1a4971;
+  transform: translateY(-2px);
+  box-shadow: var(--home-shadow-md);
+}
+
+.footer-contact .links .email-btn {
+  cursor: pointer;
+}
+
+/* ============================================
+   9. 标题修复（核心）
+   ============================================ */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6,
+.home-page h1,
+.home-page h2,
+.home-page h3 {
+  font-weight: 700 !important;
+  color: var(--home-text) !important;
+  letter-spacing: 0.04em !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.home-page h2,
+.md-typeset .home-page h2 {
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  color: var(--home-text) !important;
+  text-align: center !important;
+  margin-top: 44px !important;
+  margin-bottom: 24px !important;
+  border-bottom: none !important;
+  letter-spacing: 0.06em !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3,
+[data-md-color-scheme="slate"] .home-page h1,
+[data-md-color-scheme="slate"] .home-page h2,
+[data-md-color-scheme="slate"] .home-page h3 {
+  color: var(--home-text) !important;
+}
+
+/* ============================================
+   10. 侧边栏修复（核心）
+   ============================================ */
+.md-sidebar {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  background: var(--home-surface) !important;
+  border-right: 1px solid var(--home-border) !important;
+  flex-shrink: 0 !important;
+}
+
+.md-sidebar__scrollwrap {
+  background: var(--home-surface);
+}
+
+.md-nav {
+  background: var(--home-surface);
+}
+
+.md-nav__title {
+  color: var(--home-text);
+  background: var(--home-surface) !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid var(--home-border);
+  padding: 12px 16px !important;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.md-nav__title .md-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.md-nav__title .md-logo img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--home-shadow-sm);
+}
+
+.md-nav__link {
+  color: var(--home-text-secondary) !important;
+  font-weight: 600;
+  border-radius: 6px;
+  margin: 2px 8px;
+  padding: 6px 10px !important;
+}
+
+.md-nav__link:hover {
+  color: var(--home-text) !important;
+  background: var(--home-bg-hover);
+}
+
+.md-nav__link--active,
+.md-nav__item--active > .md-nav__link {
+  color: var(--home-accent) !important;
+  background: rgba(43, 108, 176, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link {
+  background: rgba(99, 179, 237, 0.14);
+}
+
+.md-nav__icon {
+  color: var(--home-text-muted) !important;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 76.1875em) {
+  .md-sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 242px !important;
+    height: 100% !important;
+    transform: translateX(-100%) !important;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    z-index: 100 !important;
+    background: var(--home-surface) !important;
+  }
+  
+  .md-sidebar--open {
+    transform: translateX(0) !important;
+  }
+}
+
+/* ============================================
+   11. 导航栏
+   ============================================ */
+.md-header {
+  background: var(--home-surface) !important;
+  box-shadow: var(--home-shadow-sm) !important;
+  border-bottom: 1px solid var(--home-border);
+}
+
+.md-header__title {
+  color: var(--home-text) !important;
+  font-weight: 700;
+}
+
+.md-header__button {
+  color: var(--home-text-secondary) !important;
+}
+
+.md-header__button.md-logo img,
+.md-header__inner .md-logo img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.md-search__form {
+  background: var(--home-bg) !important;
+  border-radius: 8px;
+  border: 1px solid var(--home-border);
+}
+
+.md-search__input {
+  color: var(--home-text) !important;
+}
+
+.md-search__input::placeholder {
+  color: var(--home-text-muted) !important;
+}
+
+.md-tabs {
+  background: var(--home-surface) !important;
+  border-bottom: 1px solid var(--home-border);
+}
+
+.md-tabs__link {
+  color: var(--home-text-secondary) !important;
+  font-weight: 600;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: var(--home-accent) !important;
+}
+
+/* ============================================
+   12. 滚动条
+   ============================================ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(200, 210, 220, 0.2);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, rgba(180, 195, 210, 0.7) 0%, rgba(190, 205, 220, 0.7) 100%);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, rgba(160, 175, 190, 0.8) 0%, rgba(170, 185, 200, 0.8) 100%);
+}
+
+[data-md-color-scheme="slate"]::-webkit-scrollbar-track {
+  background: rgba(80, 75, 90, 0.2);
+}
+
+[data-md-color-scheme="slate"]::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, rgba(100, 95, 115, 0.7) 0%, rgba(110, 105, 125, 0.7) 100%);
+}
+
+/* ============================================
+   13. 组件美化
+   ============================================ */
+.md-typeset table:not([class]) {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 3px 16px rgba(140, 160, 180, 0.08), 0 1px 4px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(210, 220, 230, 0.25);
+}
+
+.md-typeset table:not([class]) th {
+  background: linear-gradient(135deg, rgba(200, 215, 230, 0.95) 0%, rgba(210, 225, 240, 0.95) 100%);
+  color: #2d3748;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) {
+  border-color: rgba(80, 75, 90, 0.3);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background: linear-gradient(135deg, rgba(65, 60, 75, 0.95) 0%, rgba(70, 65, 80, 0.95) 100%);
+  color: #f7fafc;
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background: rgba(220, 230, 240, 0.2);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:hover {
+  background: rgba(90, 85, 105, 0.2);
+}
+
+.md-typeset a {
+  color: var(--home-accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(43, 108, 176, 0.2);
+}
+
+.md-typeset a:hover {
+  color: #2c5282;
+  border-bottom-color: rgba(43, 108, 176, 0.5);
+}
+
+[data-md-color-scheme="slate"] .md-typeset a {
+  color: var(--home-accent);
+  border-bottom-color: rgba(99, 179, 237, 0.2);
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: #bee3f8;
+  border-bottom-color: rgba(99, 179, 237, 0.5);
+}
+
+.md-typeset pre {
+  border-radius: 1rem;
+  box-shadow: 0 3px 16px rgba(140, 160, 180, 0.08), 0 1px 4px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(210, 220, 230, 0.2);
+}
+
+[data-md-color-scheme="slate"] .md-typeset pre {
+  border-color: rgba(80, 75, 90, 0.25);
+}
+
+.md-typeset code {
+  border-radius: 0.5rem;
+  background: rgba(240, 245, 250, 0.6);
+  border: 1px solid rgba(210, 220, 230, 0.2);
+  font-weight: 500;
+}
+
+[data-md-color-scheme="slate"] .md-typeset code {
+  background: rgba(55, 50, 65, 0.6);
+  border-color: rgba(80, 75, 90, 0.25);
+}
+
+.md-typeset blockquote {
+  border-left: 3px solid rgba(200, 215, 230, 0.7);
+  background: linear-gradient(135deg, rgba(255, 252, 248, 0.6) 0%, rgba(250, 248, 255, 0.6) 100%);
+  border-radius: 0 1rem 1rem 0;
+  padding: 1.2rem 1.8rem;
+  color: var(--home-text-secondary);
+}
+
+[data-md-color-scheme="slate"] .md-typeset blockquote {
+  border-left-color: rgba(100, 95, 120, 0.7);
+  background: linear-gradient(135deg, rgba(50, 45, 60, 0.6) 0%, rgba(55, 50, 65, 0.6) 100%);
+  color: var(--home-text-secondary);
+}
+
+.md-button {
+  background: linear-gradient(135deg, rgba(200, 215, 230, 0.95) 0%, rgba(210, 225, 240, 0.95) 100%) !important;
+  border: 1px solid rgba(210, 220, 230, 0.35) !important;
+  border-radius: 2rem !important;
+  padding: 0.7rem 1.6rem !important;
+  color: #2d3748 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.03em !important;
+  transition: all 0.35s ease !important;
+}
+
+.md-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(160, 180, 200, 0.15), 0 2px 8px rgba(255, 255, 255, 0.6) !important;
+  background: linear-gradient(135deg, rgba(190, 205, 220, 1) 0%, rgba(200, 215, 230, 1) 100%) !important;
+}
+
+[data-md-color-scheme="slate"] .md-button {
+  background: linear-gradient(135deg, rgba(65, 60, 75, 0.95) 0%, rgba(70, 65, 80, 0.95) 100%) !important;
+  color: #f7fafc !important;
+  border-color: rgba(90, 85, 105, 0.35) !important;
+}
+
+[data-md-color-scheme="slate"] .md-button:hover {
+  background: linear-gradient(135deg, rgba(75, 70, 85, 1) 0%, rgba(80, 75, 90, 1) 100%) !important;
+}
+
+/* ============================================
+   14. 动画
+   ============================================ */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-section,
+.project-card,
+.tech-tags,
+.footer-contact {
+  animation: fadeInUp 0.7s ease-out both;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+
+.md-content__inner {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* ============================================
+   15. 响应式
+   ============================================ */
+@media screen and (max-width: 768px) {
+  .home-page {
+    margin: 0 !important;
+    padding: 16px 16px 32px !important;
+  }
+
+  .profile-section {
+    padding: 40px 20px 32px;
+  }
+
+  .profile-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .profile-section .title {
+    font-size: 0.9rem;
+  }
+
+  .profile-section .avatar {
+    width: 88px;
+    height: 88px;
+  }
+
+  .project-cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 16px 0 28px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .tech-tags {
+    padding: 24px 20px;
+  }
+
+  .footer-contact .links {
+    gap: 12px;
+  }
+
+  .footer-contact .links a {
+    padding: 7px 16px;
+    font-size: 0.85rem;
+  }
+
+  .home-page h2,
+  .md-typeset .home-page h2 {
+    font-size: 1.4rem !important;
+    margin-top: 32px !important;
+  }
+}

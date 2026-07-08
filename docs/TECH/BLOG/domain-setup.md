@@ -1,13 +1,9 @@
 # DigitalPlat FreeDomain 免费域名 + Cloudflare + GitHub Pages 博客搭建全记录
 
-> 作者：hong-red
-> 日期：2026年7月7日
 > 最终域名：`https://fanxiaolin.dpdns.org`
 > 博客源站：`https://hong-red.github.io`
 
----
-
-## 📖 目录
+## 目录
 
 1. [项目背景](#项目背景)
 2. [前期准备](#前期准备)
@@ -334,5 +330,3 @@ ursula.ns.cloudflare.com
 | 最终访问地址 | [https://fanxiaolin.dpdns.org](https://fanxiaolin.dpdns.org) |
 
 ---
-
-> 📝 **注意**：本文档基于 2026年7月7日 的实际操作记录，部分步骤可能随服务商更新而变化，请以官方文档为准。

@@ -48,24 +48,39 @@ theme:
   name: material
   palette:
     - scheme: default
-      primary: indigo
-      accent: orange
+      primary: deep purple
+      accent: pink
       toggle:
         icon: material/weather-night
         name: 切换至夜间模式
     - scheme: slate
-      primary: indigo
-      accent: orange
+      primary: deep purple
+      accent: pink
       toggle:
         icon: material/weather-sunny
         name: 切换至日间模式
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top
     - navigation.indexes
     - navigation.expand
+    - navigation.sections
+    - navigation.path
     - search.suggest
     - search.highlight
+    - search.share
+    - header.autohide
+    - content.code.copy
+    - content.code.annotate
+    - content.tooltips
+  font:
+    text: 'Noto Sans SC'
+    code: 'JetBrains Mono'
+  logo: images/anime/IMG_20260608_220147.jpg
+  icon:
+    repo: fontawesome/brands/github
+  favicon: images/anime/IMG_20260608_215112.jpg
 
 # 编辑和链接配置
 edit_uri: edit/main/docs
@@ -81,6 +96,19 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
   - meta
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
 
 # 额外的JavaScript文件
 extra_javascript:
@@ -89,8 +117,7 @@ extra_javascript:
 
 # 额外的CSS文件
 extra_css:
-  # - mkdocs/css/no-footer.css  # 注释掉或删除
-  # - mkdocs/css/unordered-list-symbols.css  # 注释掉或删除
+  - stylesheets/extra.css
 
 # 社交图标配置
 extra:
