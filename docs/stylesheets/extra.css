@@ -389,10 +389,10 @@ body,
 
 .email-modal-content {
   background: var(--home-surface);
-  padding: 32px;
+  padding: 24px;
   border-radius: 16px;
   width: 90%;
-  max-width: 400px;
+  max-width: 320px;
   box-shadow: var(--home-shadow-lg);
   position: relative;
   animation: fadeInUp 0.3s ease-out;
@@ -572,34 +572,84 @@ body,
   /* 1. 抽屉（drawer）：默认滑出屏幕外 */
   .md-sidebar--primary {
     position: fixed !important;
-    top: 4.8rem !important;                /* 顶到 header 下方 */
+    top: 0 !important;
     left: 0 !important;
-    width: 24.2rem !important;
-    max-width: 80vw !important;
-    height: calc(100% - 4.8rem) !important; /* 高度减去 header */
+    width: 26rem !important;
+    max-width: 82vw !important;
+    height: 100% !important;
     transform: translateX(-100%) !important;
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s !important;
     z-index: 5 !important;                  /* 在 overlay 之上 */
     background: var(--home-surface) !important;
     box-shadow: none !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
 
-  /* 2. 遮罩：在抽屉下面 */
+  /* 2. 抽屉顶部 header：logo 在上、标题在下 */
+  .md-sidebar--primary .md-nav__title {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    padding: 28px 20px 20px !important;
+    margin: 0 !important;
+    min-height: auto !important;
+    border-bottom: 1px solid var(--home-border);
+    box-shadow: none !important;
+  }
+
+  .md-sidebar--primary .md-nav__title .md-logo {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    text-decoration: none !important;
+  }
+
+  .md-sidebar--primary .md-nav__title .md-logo img {
+    width: 72px !important;
+    height: 72px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    box-shadow: var(--home-shadow-md);
+    margin: 0 !important;
+  }
+
+  .md-sidebar--primary .md-nav__title .md-logo span {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: var(--home-text) !important;
+    letter-spacing: 0.04em !important;
+  }
+
+  /* 3. 去掉标题里的 site name 重复项 */
+  .md-sidebar--primary .md-nav__title .md-nav__button {
+    display: none !important;
+  }
+
+  /* 4. 导航列表区域占满剩余空间、可滚动 */
+  .md-sidebar--primary .md-sidebar__scrollwrap {
+    flex: 1 !important;
+    overflow-y: auto !important;
+    background: transparent !important;
+    padding: 12px 8px !important;
+  }
+
+  /* 5. 遮罩：在抽屉下面 */
   .md-overlay {
     z-index: 3 !important;
   }
 
-  /* 3. Material 用隐藏的 checkbox 控制抽屉状态：勾选时抽屉滑入 */
+  /* 6. Material 用隐藏的 checkbox 控制抽屉状态：勾选时抽屉滑入 */
   [data-md-toggle="drawer"]:checked ~ .md-container .md-sidebar--primary {
     transform: translateX(0) !important;
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
                 0 3px 14px 2px rgba(0, 0, 0, 0.12),
                 0 5px 5px -3px rgba(0, 0, 0, 0.2) !important;
-  }
-
-  /* 4. 抽屉打开时，给页面加一个"被遮挡"的标记（可选） */
-  [data-md-toggle="drawer"]:checked ~ .md-container {
-    overflow: hidden;
   }
 }
 
@@ -899,5 +949,108 @@ body,
   .md-typeset .home-page h2 {
     font-size: 1.4rem !important;
     margin-top: 32px !important;
+  }
+}
+
+/* ============================================
+   16. 全局樱花鼠标效果
+   ============================================ */
+/* 隐藏默认光标，让樱花光标替代 */
+body {
+  cursor: none;
+}
+
+/* 交互元素恢复默认光标，保证可用性 */
+a, button, input, textarea, select, [role="button"], .md-header__button, .md-search__input {
+  cursor: auto;
+}
+
+.sakura-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease;
+}
+
+.cursor-petal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  background: linear-gradient(135deg, #ffc2ce 0%, #ff9eb0 100%);
+  border-radius: 80% 0 80% 0;
+  transform-origin: 0 0;
+  opacity: 0.92;
+  box-shadow: 0 0 3px rgba(255, 160, 180, 0.25);
+}
+
+.cursor-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  background: rgba(255, 240, 200, 0.9);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.falling-petal {
+  position: fixed;
+  width: 9px;
+  height: 9px;
+  pointer-events: none;
+  z-index: 99998;
+  background: linear-gradient(135deg, #ffc2ce 0%, #ffb7c5 100%);
+  border-radius: 80% 0 80% 0;
+  opacity: 0.75;
+  animation: petalFall var(--fall-duration, 4.5s) ease-in forwards;
+}
+
+@keyframes petalFall {
+  0% {
+    transform: translate(0, 0) rotate(var(--fall-rotate, 0deg));
+    opacity: 0.75;
+  }
+  20% {
+    transform: translate(calc(var(--fall-sway, 0px) * 0.3), 20vh) rotate(calc(var(--fall-rotate, 0deg) + 72deg));
+  }
+  45% {
+    transform: translate(calc(var(--fall-sway, 0px) * -0.5), 45vh) rotate(calc(var(--fall-rotate, 0deg) + 160deg));
+  }
+  70% {
+    transform: translate(calc(var(--fall-sway, 0px) * 0.4), 70vh) rotate(calc(var(--fall-rotate, 0deg) + 250deg));
+  }
+  100% {
+    transform: translate(var(--fall-sway, 0px), 100vh) rotate(calc(var(--fall-rotate, 0deg) + 360deg));
+    opacity: 0;
+  }
+}
+
+/* 深色模式下樱花更柔和 */
+[data-md-color-scheme="slate"] .cursor-petal {
+  background: linear-gradient(135deg, #ffc2ce 0%, #ffaebc 100%);
+  box-shadow: 0 0 4px rgba(255, 160, 180, 0.35);
+}
+
+[data-md-color-scheme="slate"] .falling-petal {
+  background: linear-gradient(135deg, #ffc2ce 0%, #ffaebc 100%);
+}
+
+/* 触摸设备不隐藏光标 */
+@media (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+
+  .sakura-cursor,
+  .falling-petal {
+    display: none !important;
   }
 }
