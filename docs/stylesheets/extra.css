@@ -62,7 +62,7 @@ body,
 }
 
 /* ============================================
-   3. 首页背景（关键：移除负边距）
+   3. 首页背景（关键：背景图限定在 .home-page 内部）
    ============================================ */
 .home-page {
   position: relative;
@@ -77,7 +77,7 @@ body,
 
 .home-page::before {
   content: '';
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -85,24 +85,30 @@ body,
   background-image: url('../images/anime/IMG_20260608_220238.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   background-repeat: no-repeat;
-  z-index: -2;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .home-page::after {
   content: '';
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.78);
-  z-index: -1;
+  z-index: 1;
+  pointer-events: none;
 }
 
 [data-md-color-scheme="slate"] .home-page::after {
   background: rgba(26, 32, 44, 0.84);
+}
+
+.home-page > * {
+  position: relative;
+  z-index: 2;
 }
 
 /* ============================================
@@ -561,22 +567,39 @@ body,
   color: var(--home-text-muted) !important;
 }
 
-/* 移动端适配 */
+/* 移动端适配 - 汉堡菜单抽屉 */
 @media screen and (max-width: 76.1875em) {
-  .md-sidebar {
+  /* 1. 抽屉（drawer）：默认滑出屏幕外 */
+  .md-sidebar--primary {
     position: fixed !important;
-    top: 0 !important;
+    top: 4.8rem !important;                /* 顶到 header 下方 */
     left: 0 !important;
-    width: 242px !important;
-    height: 100% !important;
+    width: 24.2rem !important;
+    max-width: 80vw !important;
+    height: calc(100% - 4.8rem) !important; /* 高度减去 header */
     transform: translateX(-100%) !important;
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    z-index: 100 !important;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s !important;
+    z-index: 5 !important;                  /* 在 overlay 之上 */
     background: var(--home-surface) !important;
+    box-shadow: none !important;
   }
-  
-  .md-sidebar--open {
+
+  /* 2. 遮罩：在抽屉下面 */
+  .md-overlay {
+    z-index: 3 !important;
+  }
+
+  /* 3. Material 用隐藏的 checkbox 控制抽屉状态：勾选时抽屉滑入 */
+  [data-md-toggle="drawer"]:checked ~ .md-container .md-sidebar--primary {
     transform: translateX(0) !important;
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                0 3px 14px 2px rgba(0, 0, 0, 0.12),
+                0 5px 5px -3px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  /* 4. 抽屉打开时，给页面加一个"被遮挡"的标记（可选） */
+  [data-md-toggle="drawer"]:checked ~ .md-container {
+    overflow: hidden;
   }
 }
 
@@ -587,6 +610,9 @@ body,
   background: var(--home-surface) !important;
   box-shadow: var(--home-shadow-sm) !important;
   border-bottom: 1px solid var(--home-border);
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 150 !important;
 }
 
 .md-header__title {
