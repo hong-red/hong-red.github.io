@@ -6,6 +6,8 @@
 
 **项目地址**：[https://github.com/hong-red/caring-elder-miniapp](https://github.com/hong-red/caring-elder-miniapp)
 
+**作品展示（B站）**：[听暖养老日记](https://b23.tv/qeGpzn8)
+
 ## 项目概述
 
 智享养老微信小程序是一款专为老年人设计的健康管理平台，通过科技手段提升老年人的生活质量和健康管理能力，让老年人也能轻松享受科技带来的便利。

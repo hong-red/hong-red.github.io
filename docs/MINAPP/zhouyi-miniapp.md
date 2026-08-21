@@ -6,6 +6,8 @@
 
 **项目地址**：[https://github.com/hong-red/iching-mini-program](https://github.com/hong-red/iching-mini-program)
 
+**作品展示（B站）**：[周易微信小程序作品展示](https://b23.tv/rnSexEU)
+
 ## 项目概述
 
 周易微信小程序是一款集周易知识普及、卦象查询、每日运势等功能于一体的传统文化应用，用现代化技术手段传承和弘扬中华传统文化。
