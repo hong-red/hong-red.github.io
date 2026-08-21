@@ -29,8 +29,9 @@ nav:
 
   - 兴趣技术笔记:
       - Python: TECH/python/python.md
-      - 虚拟机的搭建: TECH/LINUX/create.md
-      - vim的使用: TECH/LINUX/vim.md
+      - 虚拟机:
+          - 虚拟机的搭建: TECH/LINUX/create.md
+          - vim的使用: TECH/LINUX/vim.md
       - 博客:
           - 博客搭建: TECH/BLOG/create.md
           - 博客更新: TECH/BLOG/up.md
@@ -86,6 +87,8 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
   - meta
+  - toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {case: lower}
 
 # 额外的JavaScript文件
 extra_javascript:
