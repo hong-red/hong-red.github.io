@@ -39,9 +39,8 @@
 
 | 分类 | 说明 | 链接 |
 |------|------|------|
-| Linux | Linux 学习笔记 | [查看](./TECH/LINUX/create.md) |
-| Vim | 常用命令与操作指南 | [查看](./TECH/LINUX/vim.md) |
 | Python | Python 学习笔记 | [查看](./TECH/python/python.md) |
+| 虚拟机 | Linux 搭建与 Vim 使用 | [查看](./TECH/LINUX/create.md) |
 | 博客 | GitHub + MkDocs 搭建、更新与域名绑定 | [查看](./TECH/BLOG/create.md) |
 | 装机攻略 | E3 神机捡垃圾 + 微 PE 装系统 | [查看](./INTEREST/pc-build/hardware.md) |
 | YOLO | 目标检测学习 | [查看](./YOLO/index.md) |
