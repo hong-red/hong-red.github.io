@@ -49,7 +49,7 @@
 
 | 分类 | 说明 | 链接 |
 |------|------|------|
-| 千人百村 | 仙人板村社会实践记录 | [查看](./PRACTICE/qianrenbaicun/index.md) |
+| 千人百村 | 数智渔韵平谷渔村实践记录 | [查看](./PRACTICE/qianrenbaicun/index.md) |
 
 ## 联系我
 
