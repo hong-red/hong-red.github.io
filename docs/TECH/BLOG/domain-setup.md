@@ -1,5 +1,7 @@
 # DigitalPlat FreeDomain 免费域名 + Cloudflare + GitHub Pages 博客搭建全记录
-（已跑全流程，暂时废弃）
+
+> ⚠️ 已跑全流程，暂时废弃
+>
 > 最终域名：`https://fanxiaolin.dpdns.org`
 > 博客源站：`https://hong-red.github.io`
 
