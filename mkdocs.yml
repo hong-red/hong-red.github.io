@@ -27,22 +27,22 @@ nav:
       - LaTeX: mathbuild/LATEX/LaTeX.md
       - 论文示例: mathbuild/example.md
 
-  - 实践与兴趣:
-      - 千人百村·仙人板村: PRACTICE/qianrenbaicun/index.md
-
   - 兴趣技术笔记:
       - Python: TECH/python/python.md
       - 虚拟机的搭建: TECH/LINUX/create.md
       - vim的使用: TECH/LINUX/vim.md
-      - 博客搭建: TECH/BLOG/create.md
-      - 博客更新: TECH/BLOG/up.md
-      - 免费域名绑定: TECH/BLOG/domain-setup.md
+      - 博客:
+          - 博客搭建: TECH/BLOG/create.md
+          - 博客更新: TECH/BLOG/up.md
+          - 免费域名绑定: TECH/BLOG/domain-setup.md
       - 装机攻略:
           - 硬件篇：E3神机捡垃圾装机全记录: INTEREST/pc-build/hardware.md
           - 软件篇：微PE工具箱装机全攻略: INTEREST/pc-build/software.md
+      - YOLO:
+          - YOLO11n: YOLO/index.md
 
-  - YOLO:
-      - YOLO11n: YOLO/index.md
+  - 实践与兴趣:
+      - 千人百村·仙人板村: PRACTICE/qianrenbaicun/index.md
 
 # 插件扩展
 plugins:

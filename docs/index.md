@@ -35,12 +35,6 @@
 | 论文示例 | 房价预测研究论文 | [查看](./mathbuild/example.md) |
 | LaTeX | 论文排版与公式编辑 | [查看](./mathbuild/LATEX/LaTeX.md) |
 
-## 实践与兴趣
-
-| 分类 | 说明 | 链接 |
-|------|------|------|
-| 千人百村 | 仙人板村社会实践记录 | [查看](./PRACTICE/qianrenbaicun/index.md) |
-
 ## 兴趣技术笔记
 
 | 分类 | 说明 | 链接 |
@@ -48,10 +42,15 @@
 | Linux | Linux 学习笔记 | [查看](./TECH/LINUX/create.md) |
 | Vim | 常用命令与操作指南 | [查看](./TECH/LINUX/vim.md) |
 | Python | Python 学习笔记 | [查看](./TECH/python/python.md) |
-| YOLO | 目标检测学习 | [查看](./YOLO/index.md) |
-| 博客搭建 | GitHub + MkDocs 搭建过程 | [查看](./TECH/BLOG/create.md) |
-| 域名绑定 | DigitalPlat + Cloudflare + GitHub Pages | [查看](./TECH/BLOG/domain-setup.md) |
+| 博客 | GitHub + MkDocs 搭建、更新与域名绑定 | [查看](./TECH/BLOG/create.md) |
 | 装机攻略 | E3 神机捡垃圾 + 微 PE 装系统 | [查看](./INTEREST/pc-build/hardware.md) |
+| YOLO | 目标检测学习 | [查看](./YOLO/index.md) |
+
+## 实践与兴趣
+
+| 分类 | 说明 | 链接 |
+|------|------|------|
+| 千人百村 | 仙人板村社会实践记录 | [查看](./PRACTICE/qianrenbaicun/index.md) |
 
 ## 联系我
 
