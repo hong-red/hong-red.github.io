@@ -35,7 +35,7 @@
 | 论文示例 | 房价预测研究论文 | [查看](./mathbuild/example.md) |
 | LaTeX | 论文排版与公式编辑 | [查看](./mathbuild/LATEX/LaTeX.md) |
 
-## 技术笔记
+## 兴趣技术笔记
 
 | 分类 | 说明 | 链接 |
 |------|------|------|
@@ -45,6 +45,7 @@
 | YOLO | 目标检测学习 | [查看](./YOLO/index.md) |
 | 博客搭建 | GitHub + MkDocs 搭建过程 | [查看](./TECH/BLOG/create.md) |
 | 域名绑定 | DigitalPlat + Cloudflare + GitHub Pages | [查看](./TECH/BLOG/domain-setup.md) |
+| 装机攻略 | E3 神机捡垃圾 + 微 PE 装系统 | [查看](./INTEREST/pc-build/hardware.md) |
 
 ## 联系我
 
