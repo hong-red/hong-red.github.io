@@ -35,6 +35,12 @@
 | 论文示例 | 房价预测研究论文 | [查看](./mathbuild/example.md) |
 | LaTeX | 论文排版与公式编辑 | [查看](./mathbuild/LATEX/LaTeX.md) |
 
+## 实践与兴趣
+
+| 分类 | 说明 | 链接 |
+|------|------|------|
+| 千人百村 | 仙人板村社会实践记录 | [查看](./PRACTICE/qianrenbaicun/index.md) |
+
 ## 兴趣技术笔记
 
 | 分类 | 说明 | 链接 |

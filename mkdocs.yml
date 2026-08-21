@@ -27,6 +27,9 @@ nav:
       - LaTeX: mathbuild/LATEX/LaTeX.md
       - 论文示例: mathbuild/example.md
 
+  - 实践与兴趣:
+      - 千人百村·仙人板村: PRACTICE/qianrenbaicun/index.md
+
   - 兴趣技术笔记:
       - Python: TECH/python/python.md
       - 虚拟机的搭建: TECH/LINUX/create.md
