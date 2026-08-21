@@ -6,9 +6,12 @@
 ![sqlite](https://img.shields.io/badge/sqlite-3.x-blue.svg)
 
 **项目地址**：[https://github.com/hong-red/labor-rights-helper](https://github.com/hong-red/labor-rights-helper)
+
 **部署地址**：[https://hong-red.github.io/labor-rights-helper/](https://hong-red.github.io/labor-rights-helper/)
 
-## 项目概述
+**完整版本**：[http://81.70.191.44:4000](http://81.70.191.44:4000)
+
+**完整参赛资料**：[百度网盘](https://pan.baidu.com/wap/init?surl=N4REyZHS2wz_dkXK3dEI8A&pwd=4kgm)
 
 劳动维权帮助助手是一款面向劳动者的智能维权辅助工具，在竞赛中获得了 **北京 4C 软件应用与开发 Web应用与开发 省级三等奖**。针对劳动者维权过程中的法律知识缺乏、维权流程不清、文书撰写困难等痛点，提供一站式智能辅助解决方案。
 

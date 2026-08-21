@@ -5,8 +5,12 @@
 ![响应式](https://img.shields.io/badge/响应式-设计-orange.svg)
 
 **项目地址**：[https://github.com/hong-red/memory-ai-companion](https://github.com/hong-red/memory-ai-companion)
+
 **PWA版本**：[https://hong-red.github.io/memory-ai-companion/](https://hong-red.github.io/memory-ai-companion/)
+
 **完整版本**：[http://81.70.191.44:3000](http://81.70.191.44:3000)
+
+**资料/源码**：[百度网盘](https://pan.baidu.com/s/1BjCqs6n34xQw-32ISTeS-g?pwd=3krz)
 
 ## 项目概述
 
