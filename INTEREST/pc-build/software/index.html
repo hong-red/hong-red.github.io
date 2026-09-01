@@ -1,0 +1,3081 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="范潇麟的个人网站">
+      
+      
+        <meta name="author" content="范潇麟">
+      
+      
+        <link rel="canonical" href="https://hong-red.github.io/INTEREST/pc-build/software/">
+      
+      
+        <link rel="prev" href="../hardware/">
+      
+      
+        <link rel="next" href="../../Claude-Code-cc-switch-DeepSeek-%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>软件篇：微PE工具箱装机全攻略 - 范潇麟的个人网站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#软件篇微PE工具箱装机全攻略" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="范潇麟的个人网站" class="md-header__button md-logo" aria-label="范潇麟的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            范潇麟的个人网站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              软件篇：微PE工具箱装机全攻略
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hong-red/hong-red.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hong-red.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../WEB/project_blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  网站开发
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../MINAPP/blog-article/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  微信小程序
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../AIAGENT/huggingface-deploy-guide/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AI 智能体
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../mathbuild/a/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数学建模
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../TECH/python/python/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  兴趣技术笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../PRACTICE/qianrenbaicun/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  实践与兴趣
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="范潇麟的个人网站" class="md-nav__button md-logo" aria-label="范潇麟的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    范潇麟的个人网站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hong-red/hong-red.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hong-red.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网站开发
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    网站开发
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WEB/project_blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文明回响
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WEB/labor-rights-helper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    劳动维权帮助助手
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../WEB/memory-ai-companion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    小世界记忆
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微信小程序
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    微信小程序
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MINAPP/blog-article/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智享养老
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MINAPP/zhouyi-miniapp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    周易小程序
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 智能体
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI 智能体
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIAGENT/huggingface-deploy-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hugging Face 部署指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIAGENT/sql-optimization-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL 优化智能体
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学建模
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数学建模
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mathbuild/a/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    资源准备
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mathbuild/b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    真题阶段
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mathbuild/LATEX/LaTeX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LaTeX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mathbuild/example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    论文示例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    兴趣技术笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    兴趣技术笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../TECH/python/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    虚拟机
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    虚拟机
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../TECH/LINUX/create/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    虚拟机的搭建
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../TECH/LINUX/vim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    vim的使用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    博客
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    博客
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../TECH/BLOG/create/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    博客搭建
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../TECH/BLOG/up/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    博客更新
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../TECH/BLOG/domain-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    免费域名绑定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    装机攻略
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    装机攻略
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件篇：E3神机捡垃圾装机全记录
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    软件篇：微PE工具箱装机全攻略
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    软件篇：微PE工具箱装机全攻略
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#第一部分需要准备和下载的东西" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一部分：需要准备和下载的东西
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一部分：需要准备和下载的东西">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-硬件准备" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 硬件准备
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-需要下载的文件" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 需要下载的文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-参考教程原步骤" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 参考教程原步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#第二部分在PE上进行的操作按顺序" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二部分：在PE上进行的操作（按顺序）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二部分：在PE上进行的操作（按顺序）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-制作PE启动盘在另一台电脑上操作" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 制作PE启动盘（在另一台电脑上操作）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-从U盘启动进入PE" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 从U盘启动进入PE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-进入PE后的操作步骤" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 进入PE后的操作步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#第三部分BIOS-启动设置进入PE前的关键操作" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三部分：BIOS 启动设置（进入PE前的关键操作）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第三部分：BIOS 启动设置（进入PE前的关键操作）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#一常用按键速查" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、常用按键速查
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#二Boot-Menu按-F11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、Boot Menu（按 F11）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#四-特殊情况改了启动顺序但没生效" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、⚠️ 特殊情况：改了启动顺序但没生效
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#五BIOS-其他常用设置可选" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五、BIOS 其他常用设置（可选）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#六快速参考卡" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六、快速参考卡
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#第四部分网络连接装完系统后" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四部分：网络连接（装完系统后）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第四部分：网络连接（装完系统后）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#通过手机USB共享网络让电脑上网" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        通过手机USB共享网络让电脑上网
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#第五部分实战踩坑记录" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第五部分：实战踩坑记录
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第五部分：实战踩坑记录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#坑1PE里看不到硬盘" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        坑1：PE里看不到硬盘
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#坑2WinNTSetup报拒绝访问0x5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        坑2：WinNTSetup报“拒绝访问”（0x5）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#坑3装完重启提示Reboot-and-Select-proper-Boot-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        坑3：装完重启提示“Reboot and Select proper Boot device”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#坑4BIOS改了启动顺序但无效" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        坑4：BIOS改了启动顺序但无效
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#坑5开机卡在-Shell-命令行" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        坑5：开机卡在 Shell&gt; 命令行
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#坑6第一次开机不稳定需重复几次才能进系统" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        坑6：第一次开机不稳定，需重复几次才能进系统
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#坑7分区时选MBR还是GPT" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        坑7：分区时选MBR还是GPT？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#附录常用命令速查" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附录：常用命令速查
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 工具配置
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI 工具配置
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Claude-Code-cc-switch-DeepSeek-%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude Code + cc-switch + DeepSeek 配置教程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../YOLO/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    YOLO
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    YOLO
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../PRACTICE/qianrenbaicun/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实践与兴趣
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    实践与兴趣
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#第一部分需要准备和下载的东西" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一部分：需要准备和下载的东西
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一部分：需要准备和下载的东西">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-硬件准备" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 硬件准备
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-需要下载的文件" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 需要下载的文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-参考教程原步骤" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 参考教程原步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#第二部分在PE上进行的操作按顺序" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二部分：在PE上进行的操作（按顺序）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二部分：在PE上进行的操作（按顺序）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-制作PE启动盘在另一台电脑上操作" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 制作PE启动盘（在另一台电脑上操作）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-从U盘启动进入PE" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 从U盘启动进入PE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-进入PE后的操作步骤" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 进入PE后的操作步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#第三部分BIOS-启动设置进入PE前的关键操作" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三部分：BIOS 启动设置（进入PE前的关键操作）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第三部分：BIOS 启动设置（进入PE前的关键操作）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#一常用按键速查" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、常用按键速查
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#二Boot-Menu按-F11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、Boot Menu（按 F11）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#四-特殊情况改了启动顺序但没生效" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、⚠️ 特殊情况：改了启动顺序但没生效
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#五BIOS-其他常用设置可选" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五、BIOS 其他常用设置（可选）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#六快速参考卡" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六、快速参考卡
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#第四部分网络连接装完系统后" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四部分：网络连接（装完系统后）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第四部分：网络连接（装完系统后）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#通过手机USB共享网络让电脑上网" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        通过手机USB共享网络让电脑上网
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#第五部分实战踩坑记录" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第五部分：实战踩坑记录
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第五部分：实战踩坑记录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#坑1PE里看不到硬盘" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        坑1：PE里看不到硬盘
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#坑2WinNTSetup报拒绝访问0x5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        坑2：WinNTSetup报“拒绝访问”（0x5）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#坑3装完重启提示Reboot-and-Select-proper-Boot-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        坑3：装完重启提示“Reboot and Select proper Boot device”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#坑4BIOS改了启动顺序但无效" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        坑4：BIOS改了启动顺序但无效
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#坑5开机卡在-Shell-命令行" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        坑5：开机卡在 Shell&gt; 命令行
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#坑6第一次开机不稳定需重复几次才能进系统" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        坑6：第一次开机不稳定，需重复几次才能进系统
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#坑7分区时选MBR还是GPT" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        坑7：分区时选MBR还是GPT？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#附录常用命令速查" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附录：常用命令速查
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="软件篇微PE工具箱装机全攻略">软件篇：微PE工具箱装机全攻略</h1>
+<blockquote>
+<p><strong>参考教程</strong>：<a href="https://xhslink.cn/o/oVbyRFcLo4">💻微PE工具箱U盘制作及重装系统全攻略！</a>（小红书）</p>
+<p>本指南基于该教程步骤，补充实际装机中遇到的坑和解决方案。</p>
+</blockquote>
+<p><img alt="Image" src="https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTY3NTIwMThjMDE2M2NiNzMyZTg1MWJkMmMzYmIxOWFfN2IzMDUyMDAxMWQ0OWU0NTg2MjVmYmE2MGQ1MzdkMWFfSUQ6NzY3NjE1NzgzMTM4MDQwNTQ5MF8xNzg3MzIyOTcwOjE3ODc0MDkzNzBfVjM" /></p>
+<p><img alt="Image" src="https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDljYmFhZjlmNzk1MTljYmFkYmRjYzUyMzQ1MzVmMmZfMWM0MDI5MDZmZmU3YTViNmQwYTBhMzE0NDgyYzc3ZjdfSUQ6NzY3NjE1NzgzMDUyNDc1MTEzNV8xNzg3MzIyOTcwOjE3ODc0MDkzNzBfVjM" /></p>
+<p><img alt="Image" src="https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NTBjYjE0MDQyZTAzNmUxODE4OTdhYjJmNGJmNTVmZmJfYTk5NjJjNmRlNWRlOGE3ZGRhOTgxOGNmMWM1ZWIyZmZfSUQ6NzY3NjE1NzgzMDczODcwOTc4NV8xNzg3MzIyOTcwOjE3ODc0MDkzNzBfVjM" /></p>
+<h2 id="第一部分需要准备和下载的东西">第一部分：需要准备和下载的东西</h2>
+<h3 id="1-硬件准备">1. 硬件准备</h3>
+<ul>
+<li>
+<p><strong>U盘</strong>：≥8GB（制作时会清空所有数据）</p>
+</li>
+<li>
+<p><strong>另一台正常使用的电脑</strong>：用于下载工具和系统镜像</p>
+</li>
+</ul>
+<h3 id="2-需要下载的文件">2. 需要下载的文件</h3>
+<table>
+<thead>
+<tr>
+<th>工具/文件</th>
+<th>用途</th>
+<th>下载地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>微PE工具箱（64位）</td>
+<td>制作PE启动盘</td>
+<td>官网 <code>wepe.com.cn</code>，下载 <code>WePE_64_V2.3.exe</code></td>
+</tr>
+<tr>
+<td>Windows 10/11 ISO镜像</td>
+<td>系统安装文件</td>
+<td>微软官网下载MediaCreationTool，选择“为另一台电脑创建安装介质”→“ISO文件”</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-参考教程原步骤">3. 参考教程原步骤</h3>
+<p>原教程分为两大步：</p>
+<ol>
+<li>
+<p><strong>制作启动盘</strong>：下载镜像→下载PE工具→运行PE制作U盘→将ISO复制到U盘</p>
+</li>
+<li>
+<p><strong>装系统</strong>：U盘启动→进入PE→DiskGenius分区→Windows安装器安装→重启拔U盘→完成设置</p>
+</li>
+</ol>
+<blockquote>
+<p>⚠️ 以下内容为原教程未提及的**实战踩坑补充**，建议与原教程对照阅读。</p>
+</blockquote>
+<h2 id="第二部分在PE上进行的操作按顺序">第二部分：在PE上进行的操作（按顺序）</h2>
+<h3 id="21-制作PE启动盘在另一台电脑上操作">2.1 制作PE启动盘（在另一台电脑上操作）</h3>
+<blockquote>
+<p>参考教程第一步</p>
+</blockquote>
+<ol>
+<li>
+<p>插入U盘（≥8GB）</p>
+</li>
+<li>
+<p>双击运行 <code>WePE_64_V2.3.exe</code></p>
+</li>
+<li>
+<p>点击 <strong>“安装PE到U盘”</strong></p>
+</li>
+<li>
+<p>选择你的U盘，分区格式选 <strong>FAT32</strong></p>
+</li>
+<li>
+<p>点击 **“立即安装”**，等待进度条完成（约2分钟）</p>
+</li>
+<li>
+<p>将下载好的 <strong>Windows ISO镜像文件</strong> 复制到U盘根目录</p>
+</li>
+</ol>
+<h3 id="22-从U盘启动进入PE">2.2 从U盘启动进入PE</h3>
+<blockquote>
+<p>参考教程第二步第1条</p>
+</blockquote>
+<ol>
+<li>
+<p>将制作好的U盘插入要装机的电脑（建议插**主机后面板USB 2.0口**）</p>
+</li>
+<li>
+<p>开机按 <code>F11</code> 进入启动菜单，选择U盘启动</p>
+</li>
+<li>
+<p>⚠️ **关键点**：如果U盘有两个选项（一个带 <code>UEFI</code> 前缀，一个不带）：</p>
+<ul>
+<li>先选 **带 <strong><code>UEFI</code></strong> 的**；如果PE里“此电脑”看不到硬盘，重启换 **不带 <strong><code>UEFI</code></strong> 的** 再试</li>
+</ul>
+</li>
+<li>
+<p>PE启动界面选第一个选项进入桌面</p>
+</li>
+</ol>
+<h3 id="23-进入PE后的操作步骤">2.3 进入PE后的操作步骤</h3>
+<p><strong>步骤1：分区与格式化硬盘</strong></p>
+<blockquote>
+<p>参考教程第二步第3条</p>
+</blockquote>
+<ul>
+<li>
+<p>双击桌面上的 <strong><code>DiskGenius</code></strong></p>
+</li>
+<li>
+<p>选中你要装系统的硬盘（看容量确认）</p>
+</li>
+<li>
+<p>右键点击该硬盘 → **“快速分区”**：</p>
+<ul>
+<li>
+<p>分区表类型：老主板（B75）选 **MBR**，新主板选 <strong>GPT</strong></p>
+</li>
+<li>
+<p>分区数目：自定（建议至少分一个C盘）</p>
+</li>
+<li>
+<p>勾选 <strong>“对齐到4K”</strong></p>
+</li>
+<li>
+<p>点击 <strong>“确定”</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p>等待完成（约1-3分钟），关闭DiskGenius</p>
+</li>
+</ul>
+<p><strong>步骤2：安装系统（WinNTSetup）</strong></p>
+<blockquote>
+<p>参考教程第二步第4条</p>
+</blockquote>
+<ul>
+<li>
+<p>双击桌面上的 <code>**Windows安装器**</code>（WinNTSetup）</p>
+</li>
+<li>
+<p><strong>第一项</strong>：点击“选择” → 浏览到U盘内的ISO镜像 → 进入 <code>sources</code> 文件夹 → 选中 <code>install.wim</code> 或 <code>install.esd</code></p>
+</li>
+<li>
+<p><strong>第二项（引导驱动器）</strong>：</p>
+<ul>
+<li>
+<p>MBR分区：选 <strong>C盘</strong></p>
+</li>
+<li>
+<p>GPT分区：选 **EFI分区**（FAT32，约100-300MB）</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>第三项（安装位置）</strong>：选 <strong>C盘</strong></p>
+</li>
+<li>
+<p>点击 <strong>“开始安装”</strong> → 确定 → 等待进度条完成（约10-15分钟）</p>
+</li>
+</ul>
+<p><strong>步骤3：重启并拔掉U盘</strong></p>
+<blockquote>
+<p>参考教程第二步第5条</p>
+</blockquote>
+<ul>
+<li>
+<p>安装完成后，点击 <strong>“重启”</strong></p>
+</li>
+<li>
+<p><strong>在屏幕变黑的瞬间，立即拔掉U盘</strong></p>
+</li>
+</ul>
+<p><strong>步骤4：完成Windows首次设置</strong></p>
+<blockquote>
+<p>参考教程第二步第5条</p>
+</blockquote>
+<ul>
+<li>
+<p>进入Windows设置向导</p>
+</li>
+<li>
+<p>出现网络连接界面时，点击 <strong>“我没有Internet连接”</strong> → <strong>“继续执行有限设置”</strong></p>
+</li>
+<li>
+<p>创建本地账户，完成设置，进入桌面</p>
+</li>
+</ul>
+<h2 id="第三部分BIOS-启动设置进入PE前的关键操作">第三部分：BIOS 启动设置（进入PE前的关键操作）</h2>
+<blockquote>
+<p>微星主板通用操作，适用于 B75MA-P45 及其他微星主板。</p>
+</blockquote>
+<h3 id="一常用按键速查">一、常用按键速查</h3>
+<table>
+<thead>
+<tr>
+<th>按键</th>
+<th>时机</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Del</code></td>
+<td>开机后<strong>连续快速按</strong></td>
+<td>进入 BIOS 设置界面（SETTINGS）</td>
+</tr>
+<tr>
+<td><code>F11</code></td>
+<td>开机后<strong>连续快速按</strong></td>
+<td>进入 Boot Menu（启动菜单），**临时选择**本次从哪个设备启动</td>
+</tr>
+<tr>
+<td><code>F10</code></td>
+<td>在 BIOS 界面中按</td>
+<td><strong>保存当前设置并重启</strong>（会弹出确认框，选 <code>Yes</code> 或 <code>OK</code>）</td>
+</tr>
+<tr>
+<td><code>Esc</code></td>
+<td>在 BIOS 界面中按</td>
+<td>返回上一级菜单，或退出当前选项（不保存）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="二Boot-Menu按-F11">二、Boot Menu（按 F11）</h3>
+<p>开机连续按 <code>F11</code> 后，屏幕会显示一个设备列表，例如：</p>
+<p>```Plain Text</p>
+<p>Please select boot device:</p>
+<p>UEFI: General UDisk 5.00      ← 带 UEFI 前缀的 U 盘（UEFI 模式）
+General UDisk 5.00            ← 不带 UEFI 的 U 盘（传统模式）
+SATA5:Colorful SL300 120GB    ← 你的 SSD 硬盘
+Enter Setup                   ← 进入 BIOS 设置
+<div class="highlight"><pre><span></span><code>- **选择设备**：用键盘 **↑ ↓ 方向键** 移动高亮到目标设备，按 **`Enter`** 确认
+
+- **UEFI vs 不带 UEFI**：如果进 PE 后“此电脑”里看不到硬盘，说明启动模式选错了，重启换另一个 U 盘选项再试
+
+- **Enter Setup**：等同于开机按 `Del`，进入 BIOS 详细设置界面
+
+
+
+### 三、BIOS 中永久修改启动顺序（按 Del 进入）
+
+
+
+&gt; 如果不想每次按 F11 手动选，可以在 BIOS 里把启动顺序固定下来。
+&gt; 
+&gt; 
+
+
+
+**操作路径：**
+
+```Plain Text
+
+SETTINGS → Boot → Boot Device Priority
+</code></pre></div></p>
+<p><strong>步骤：</strong></p>
+<ol>
+<li>
+<p>开机按 <code>Del</code> 进入 BIOS</p>
+</li>
+<li>
+<p>方向键移到右上角 <code>**SETTINGS**</code>，按 <code>Enter</code></p>
+</li>
+<li>
+<p>选择 <code>**Boot**</code>，按 <code>Enter</code></p>
+</li>
+<li>
+<p>选择 <code>**Boot Device Priority**</code>，按 <code>Enter</code></p>
+</li>
+<li>
+<p>在 <code>Boot Option #1</code> 上按 <code>Enter</code>，弹出设备列表</p>
+</li>
+<li>
+<p>用方向键选择目标设备（U盘或硬盘），按 <code>Enter</code> 确认</p>
+</li>
+<li>
+<p>按 <strong><code>F10</code></strong> 保存，弹出确认框选 <code>Yes</code>，电脑自动重启</p>
+</li>
+</ol>
+<h3 id="四-特殊情况改了启动顺序但没生效">四、⚠️ 特殊情况：改了启动顺序但没生效</h3>
+<blockquote>
+<p>如果 <code>Boot Option #1</code> 已经改成了 U盘，但重启后还是从硬盘启动或报错，需要检查这里：</p>
+</blockquote>
+<p><strong>操作路径：</strong></p>
+<p>```Plain Text</p>
+<p>SETTINGS → Boot → Hard Disk Drive BBS Priorities
+```</p>
+<p><strong>原因：</strong> <code>Hard Disk Drive BBS Priorities</code>（硬盘 BBS 优先级）的**优先级高于** <code>Boot Option #1</code>。也就是说，即使你在 <code>Boot Option #1</code> 里选了 U盘，但如果 <code>Hard Disk Drive BBS Priorities</code> 里的第一项是 SSD，电脑还是优先从 SSD 启动。</p>
+<p><strong>解决方法：</strong></p>
+<ol>
+<li>
+<p>在 <code>Boot</code> 菜单中找到 <code>**Hard Disk Drive BBS Priorities**</code>，按 <code>Enter</code> 进入</p>
+</li>
+<li>
+<p>把 <code>Boot Option #1</code> 改为你的 **U 盘**（如果列表里有的话）</p>
+</li>
+<li>
+<p>如果列表里没有 U盘，说明 U盘被识别为“可移动设备”而非“硬盘”，此时应回到 <code>Boot Option #1</code> 中，直接选 <code>USB Hard Disk</code> 或 <code>USB Key</code> 类的选项</p>
+</li>
+<li>
+<p>按 <code>Esc</code> 返回，按 <strong><code>F10</code></strong> 保存重启</p>
+</li>
+</ol>
+<h3 id="五BIOS-其他常用设置可选">五、BIOS 其他常用设置（可选）</h3>
+<table>
+<thead>
+<tr>
+<th>设置项</th>
+<th>位置</th>
+<th>推荐值</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Boot mode select</td>
+<td>SETTINGS → Boot → Boot Configuration</td>
+<td><strong>LEGACY+UEFI</strong></td>
+<td>同时支持两种启动模式，兼容性最好</td>
+</tr>
+<tr>
+<td>Fast Boot</td>
+<td>SETTINGS → Boot → Boot Configuration</td>
+<td><strong>Disabled</strong>（关闭）</td>
+<td>老主板建议关闭，避免跳过设备检测导致识别不到硬盘</td>
+</tr>
+<tr>
+<td>Restore after AC Power Loss</td>
+<td>SETTINGS → Power / ECO</td>
+<td><strong>Power on</strong></td>
+<td>断电恢复后自动开机；或保持默认 <code>Power off</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="六快速参考卡">六、快速参考卡</h3>
+<table>
+<thead>
+<tr>
+<th>目标</th>
+<th>操作方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本次从 U 盘启动</td>
+<td>开机按 <code>F11</code> → 选 U 盘 → <code>Enter</code></td>
+</tr>
+<tr>
+<td>本次从硬盘启动</td>
+<td>开机按 <code>F11</code> → 选 SSD → <code>Enter</code></td>
+</tr>
+<tr>
+<td>永久改启动顺序</td>
+<td>按 <code>Del</code> 进 BIOS → Boot → Boot Device Priority → 改 <code>Boot Option #1</code> → <code>F10</code> 保存</td>
+</tr>
+<tr>
+<td>改硬盘优先级</td>
+<td>按 <code>Del</code> 进 BIOS → Boot → Hard Disk Drive BBS Priorities → 改顺序 → <code>F10</code> 保存</td>
+</tr>
+<tr>
+<td>进 BIOS</td>
+<td>开机连续按 <code>Del</code></td>
+</tr>
+<tr>
+<td>保存并重启</td>
+<td>在 BIOS 中按 <code>F10</code> → <code>Yes</code></td>
+</tr>
+<tr>
+<td>不保存退出</td>
+<td>在 BIOS 中按 <code>Esc</code> 或 <code>SETTINGS</code> → <code>Save &amp; Exit</code> → 选 <code>Discard Changes and Exit</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="第四部分网络连接装完系统后">第四部分：网络连接（装完系统后）</h2>
+<h3 id="通过手机USB共享网络让电脑上网">通过手机USB共享网络让电脑上网</h3>
+<blockquote>
+<p>适用场景：电脑无法连接WiFi或插网线没反应时，临时通过手机共享网络上网。</p>
+</blockquote>
+<p><strong>操作步骤：</strong></p>
+<ol>
+<li>
+<p><strong>用USB数据线连接手机和电脑</strong>（插主机后面USB口）</p>
+</li>
+<li>
+<p><strong>手机上开启“USB网络共享”</strong>：</p>
+<ul>
+<li>
+<p>安卓手机：设置 → 网络和互联网 → 热点和网络共享 → 打开 <strong>“USB网络共享”</strong></p>
+</li>
+<li>
+<p>苹果手机：设置 → 个人热点 → 打开“允许其他人加入”</p>
+</li>
+<li>
+<p>手机可先连WiFi，也可用流量，USB共享会把当前网络共享给电脑</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>电脑自动联网</strong>：任务栏网络图标变为“已连接”</p>
+</li>
+<li>
+<p>如果没反应，**重启电脑**（保持手机连接）</p>
+</li>
+</ol>
+<p><strong>注意事项：</strong></p>
+<ul>
+<li>
+<p>手机连WiFi时，电脑走WiFi网络，不消耗流量</p>
+</li>
+<li>
+<p>手机用流量时，注意流量余额</p>
+</li>
+<li>
+<p>关机后再开机，需重新开启USB网络共享</p>
+</li>
+<li>
+<p>部分安卓手机需先开启“开发者模式”才能找到该选项</p>
+</li>
+</ul>
+<h2 id="第五部分实战踩坑记录">第五部分：实战踩坑记录</h2>
+<blockquote>
+<p>以下为原教程未提及的**实战中遇到的问题及解决方法**。</p>
+</blockquote>
+<h3 id="坑1PE里看不到硬盘">坑1：PE里看不到硬盘</h3>
+<ul>
+<li>
+<p><strong>现象</strong>：PE能进，但“此电脑”里只有U盘，没有SSD</p>
+</li>
+<li>
+<p><strong>原因</strong>：PE启动模式（UEFI/Legacy）与硬盘分区格式（GPT/MBR）不匹配</p>
+</li>
+<li>
+<p><strong>解决</strong>：重启按 <code>F11</code>，**切换U盘启动模式**（带UEFI vs 不带），重新进入PE</p>
+</li>
+</ul>
+<h3 id="坑2WinNTSetup报拒绝访问0x5">坑2：WinNTSetup报“拒绝访问”（0x5）</h3>
+<ul>
+<li>
+<p><strong>现象</strong>：安装过程中弹出错误，无法继续</p>
+</li>
+<li>
+<p><strong>原因</strong>：引导分区（EFI分区）被占用或权限不足</p>
+</li>
+<li>
+<p><strong>解决</strong>：打开DiskGenius → 右键点击EFI分区（FAT32）→ <strong>“格式化”</strong> → 重新执行安装</p>
+</li>
+</ul>
+<h3 id="坑3装完重启提示Reboot-and-Select-proper-Boot-device">坑3：装完重启提示“Reboot and Select proper Boot device”</h3>
+<ul>
+<li>
+<p><strong>现象</strong>：拔掉U盘后黑屏，提示找不到可启动设备</p>
+</li>
+<li>
+<p><strong>原因</strong>：引导没有正确写入硬盘</p>
+</li>
+<li>
+<p><strong>解决</strong>：进PE → 打开 <code>Dism++</code> → <strong>“恢复功能”</strong> → <strong>“引导修复”</strong> → 选择C盘 → 重启</p>
+</li>
+</ul>
+<h3 id="坑4BIOS改了启动顺序但无效">坑4：BIOS改了启动顺序但无效</h3>
+<ul>
+<li>
+<p><strong>现象</strong>：BIOS里改了启动顺序，但重启还是进PE或报错</p>
+</li>
+<li>
+<p><strong>原因</strong>：<code>Hard Disk Drive BBS Priorities</code> 的优先级高于 <code>Boot Option #1</code></p>
+</li>
+<li>
+<p><strong>解决</strong>：进BIOS → <code>Boot</code> → <code>Hard Disk Drive BBS Priorities</code> → 把目标设备调到第一位</p>
+</li>
+</ul>
+<h3 id="坑5开机卡在-Shell-命令行">坑5：开机卡在 <code>Shell&gt;</code> 命令行</h3>
+<ul>
+<li>
+<p><strong>现象</strong>：电脑启动后进入黑底白字的 <code>Shell&gt;</code> 界面</p>
+</li>
+<li>
+<p><strong>原因</strong>：系统引导完全丢失</p>
+</li>
+<li>
+<p><strong>解决</strong>：进PE → 打开命令提示符 → 输入 <code>bcdboot C:\Windows</code> → 重启</p>
+</li>
+</ul>
+<h3 id="坑6第一次开机不稳定需重复几次才能进系统">坑6：第一次开机不稳定，需重复几次才能进系统</h3>
+<ul>
+<li>
+<p><strong>现象</strong>：开机“转一圈就停”，需要重启两三次才能进系统</p>
+</li>
+<li>
+<p><strong>原因</strong>：电源老化（如航嘉网彪425），启动时电压建立慢</p>
+</li>
+<li>
+<p><strong>解决</strong>：养成“长按开机键1秒再松手”的习惯；或进BIOS设置 <code>Boot Delay</code> / <code>POST Time</code> 为3-5秒</p>
+</li>
+</ul>
+<h3 id="坑7分区时选MBR还是GPT">坑7：分区时选MBR还是GPT？</h3>
+<ul>
+<li>
+<p>老主板（B75）推荐 **MBR**，兼容性更好</p>
+</li>
+<li>
+<p>硬盘容量超过2TB必须用 <strong>GPT</strong></p>
+</li>
+<li>
+<p>想用UEFI快速启动，选 <strong>GPT + UEFI模式</strong></p>
+</li>
+</ul>
+<h2 id="附录常用命令速查">附录：常用命令速查</h2>
+<table>
+<thead>
+<tr>
+<th>用途</th>
+<th>命令（在PE里执行）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>重建引导</td>
+<td><code>bcdboot C:\Windows</code></td>
+</tr>
+<tr>
+<td>修复引导记录</td>
+<td><code>bootrec /fixmbr</code> + <code>bootrec /fixboot</code> + <code>bootrec /rebuildbcd</code></td>
+</tr>
+<tr>
+<td>修复系统文件（进系统后执行）</td>
+<td><code>sfc /scannow</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>软件篇完。</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 范潇麟
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/354007086" target="_blank" rel="noopener" title="Bilibili | 红月的雨" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/hong-red" target="_blank" rel="noopener" title="GitHub | hong-red" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
