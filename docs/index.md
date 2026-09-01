@@ -42,6 +42,7 @@
 | Python | Python 学习笔记 | [查看](./TECH/python/python.md) |
 | 虚拟机 | Linux 搭建与 Vim 使用 | [查看](./TECH/LINUX/create.md) |
 | 博客 | GitHub + MkDocs 搭建、更新与域名绑定 | [查看](./TECH/BLOG/create.md) |
+| AI 工具配置 | Claude Code + cc-switch + DeepSeek 完整配置教程 | [查看](./INTEREST/Claude-Code-cc-switch-DeepSeek-配置教程.md) |
 | 装机攻略 | E3 神机捡垃圾 + 微 PE 装系统 | [查看](./INTEREST/pc-build/hardware.md) |
 | YOLO | 目标检测学习 | [查看](./YOLO/index.md) |
 
