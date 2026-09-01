@@ -39,6 +39,8 @@ nav:
       - 装机攻略:
           - 硬件篇：E3神机捡垃圾装机全记录: INTEREST/pc-build/hardware.md
           - 软件篇：微PE工具箱装机全攻略: INTEREST/pc-build/software.md
+      - AI 工具配置:
+          - Claude Code + cc-switch + DeepSeek 配置教程: INTEREST/Claude-Code-cc-switch-DeepSeek-配置教程.md
       - YOLO:
           - YOLO11n: YOLO/index.md
 
