@@ -1,68 +1,28 @@
 # 我的个人网站
 
-欢迎来到我的博客，这里是范潇麟的学习笔记记录。
+欢迎来到我的博客，这里是范潇麟的学习与项目记录 —— 关注 AI、Web 开发、小程序、游戏与传统文化。
 
 ## 项目作品
 
-### Web 应用
-
-| 项目 | 说明 | 链接 |
+| 项目 | 方向 | 说明 |
 |------|------|------|
-| 文明回响 | 传统文化 AI 互动平台 | [查看](./WEB/project_blog.md) |
-| 劳动维权助手 | 劳动者维权辅助工具 | [查看](./WEB/labor-rights-helper.md) |
-| 小世界记忆 | AI 情感陪伴应用 | [查看](./WEB/memory-ai-companion.md) |
+| [文明回响](./WEB/project_blog.md) | Web | 传统文化 AI 互动平台 |
+| [劳动维权帮助助手](./WEB/labor-rights-helper.md) | Web | 劳动者维权辅助工具（4C 省三） |
+| [小世界记忆](./WEB/memory-ai-companion.md) | Web | AI 情感陪伴应用 |
+| [智享养老](./MINAPP/blog-article.md) | 小程序 | 养老健康服务小程序 |
+| [周易小程序](./MINAPP/zhouyi-miniapp.md) | 小程序 | 传统文化周易查询 |
+| [SQL 优化智能体](./AIAGENT/sql-optimization-agent.md) | AI 智能体 | 数据库 SQL 优化 AI Agent |
+| [Hugging Face 部署指南](./AIAGENT/huggingface-deploy-guide.md) | AI 智能体 | Spaces 部署教程 |
+| [妙文](./APP/miaowen-article-agent.md) | APP | 公众号文章一站式生成助手（网页版 + 安卓端） |
+| [十三经 IP 游戏](./Unity/thirteen-classics.md) | Unity | 传统文化经典拟人化 2D 剧情游戏 |
 
-### 微信小程序
+## 学习笔记
 
-| 项目 | 说明 | 链接 |
-|------|------|------|
-| 智享养老 | 养老健康服务小程序 | [查看](./MINAPP/blog-article.md) |
-| 周易小程序 | 传统文化周易查询 | [查看](./MINAPP/zhouyi-miniapp.md) |
-
-### AI 智能体
-
-| 项目 | 说明 | 链接 |
-|------|------|------|
-| SQL 优化智能体 | 数据库 SQL 优化 AI Agent | [查看](./AIAGENT/sql-optimization-agent.md) |
-| Hugging Face 部署指南 | Spaces 部署教程 | [查看](./AIAGENT/huggingface-deploy-guide.md) |
-
-### APP
-
-| 项目 | 说明 | 链接 |
-|------|------|------|
-| 妙文 | 公众号文章一站式生成助手（网页版 + 安卓端） | [查看](./APP/miaowen-article-agent.md) |
-
-### Unity
-
-| 项目 | 说明 | 链接 |
-|------|------|------|
-| 十三经 IP 游戏 | 传统文化经典拟人化 2D 剧情游戏 | [查看](./Unity/thirteen-classics.md) |
-
-## 数学建模
-
-| 分类 | 说明 | 链接 |
-|------|------|------|
-| 资源准备 | Python 数学实践与建模资料 | [查看](./mathbuild/a.md) |
-| 真题阶段 | 历年赛题与算法汇总 | [查看](./mathbuild/b.md) |
-| 论文示例 | 房价预测研究论文 | [查看](./mathbuild/example.md) |
-| LaTeX | 论文排版与公式编辑 | [查看](./mathbuild/LATEX/LaTeX.md) |
-
-## 兴趣技术笔记
-
-| 分类 | 说明 | 链接 |
-|------|------|------|
-| Python | Python 学习笔记 | [查看](./TECH/python/python.md) |
-| 虚拟机 | Linux 搭建与 Vim 使用 | [查看](./TECH/LINUX/create.md) |
-| 博客 | GitHub + MkDocs 搭建、更新与域名绑定 | [查看](./TECH/BLOG/create.md) |
-| AI 工具配置 | Claude Code + cc-switch + DeepSeek 完整配置教程 | [查看](./INTEREST/Claude-Code-cc-switch-DeepSeek-配置教程.md) |
-| 装机攻略 | E3 神机捡垃圾 + 微 PE 装系统 | [查看](./INTEREST/pc-build/hardware.md) |
-| YOLO | 目标检测学习 | [查看](./YOLO/index.md) |
-
-## 实践与兴趣
-
-| 分类 | 说明 | 链接 |
-|------|------|------|
-| 千人百村 | 数智渔韵平谷渔村实践记录 | [查看](./PRACTICE/qianrenbaicun/index.md) |
+| 分类 | 内容 |
+|------|------|
+| [数学建模](./mathbuild/a.md) | 资源准备 · 真题阶段 · LaTeX · 论文示例 |
+| [兴趣技术笔记](./TECH/python/python.md) | Python · Linux/Vim · 博客搭建 · 装机攻略 · AI 工具配置 · YOLO |
+| [实践与兴趣](./PRACTICE/qianrenbaicun/index.md) | 千人百村 · 数智渔韵平谷渔村实践 |
 
 ## 联系我
 
