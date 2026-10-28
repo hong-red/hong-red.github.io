@@ -20,6 +20,7 @@ nav:
   - AI 智能体:
       - Hugging Face 部署指南: AIAGENT/huggingface-deploy-guide.md
       - SQL 优化智能体: AIAGENT/sql-optimization-agent.md
+      - 妙文·公众号写作助手: AIAGENT/miaowen-article-agent.md
 
   - 数学建模:
       - 资源准备: mathbuild/a.md

@@ -25,6 +25,7 @@
 |------|------|------|
 | SQL 优化智能体 | 数据库 SQL 优化 AI Agent | [查看](./AIAGENT/sql-optimization-agent.md) |
 | Hugging Face 部署指南 | Spaces 部署教程 | [查看](./AIAGENT/huggingface-deploy-guide.md) |
+| 妙文 | 公众号文章一站式生成助手（网页版 + 安卓端） | [查看](./AIAGENT/miaowen-article-agent.md) |
 
 ## 数学建模
 
