@@ -25,7 +25,18 @@
 |------|------|------|
 | SQL 优化智能体 | 数据库 SQL 优化 AI Agent | [查看](./AIAGENT/sql-optimization-agent.md) |
 | Hugging Face 部署指南 | Spaces 部署教程 | [查看](./AIAGENT/huggingface-deploy-guide.md) |
-| 妙文 | 公众号文章一站式生成助手（网页版 + 安卓端） | [查看](./AIAGENT/miaowen-article-agent.md) |
+
+### APP
+
+| 项目 | 说明 | 链接 |
+|------|------|------|
+| 妙文 | 公众号文章一站式生成助手（网页版 + 安卓端） | [查看](./APP/miaowen-article-agent.md) |
+
+### Unity
+
+| 项目 | 说明 | 链接 |
+|------|------|------|
+| 十三经 IP 游戏 | 传统文化经典拟人化 2D 剧情游戏 | [查看](./Unity/thirteen-classics.md) |
 
 ## 数学建模
 
