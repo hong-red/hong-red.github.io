@@ -5,15 +5,19 @@
 ![Live2D](https://img.shields.io/badge/Live2D-原生渲染-ff69b4.svg)
 ![AI](https://img.shields.io/badge/AI-对话%2B语音-blueviolet.svg)
 
+**项目仓库**：[https://github.com/hong-red/dianyun-zhichuang](https://github.com/hong-red/dianyun-zhichuang)
+
 **作品展示（B站）**：[十三经 IP 游戏作品演示](https://www.bilibili.com/zh-Hans/video/BV14BxL6XEGy/)
 
 **技术栈**：Unity 2022.3 LTS（2D）+ C# + Live2D Cubism SDK + Open-LLM-VTuber
 
 ## 项目概述
 
-「十三经」是儒家十三部经典的合称。「十三经 IP 游戏」把这些典籍拟人化为 13 个角色 IP，装进一个叫**典籍大陆**的世界里——玩家扮演「传礼者」，进入大地图逐个唤醒沉睡的经典，收集它们的记忆碎片，最终驱散笼罩典籍大陆的「遗忘之影」。
+「十三经」是儒家十三部经典的合称。「十三经 IP 游戏」（典韵智创）把这些典籍拟人化为 13 个角色 IP，装进一个叫**典籍大陆**的世界里——玩家扮演「传礼者」，进入各个经典的世界逐个唤醒沉睡的经典、收集它们的记忆碎片，最终驱散笼罩典籍大陆的「遗忘之影」。
 
 它既是一次传统文化 IP 的数字化尝试，也是一次完整的 2D 剧情游戏工程实践：**13 个 IP 全部可玩**，其中 2 个是 Live2D + AI 对话的体验关，另外 11 个是各有小玩法的剧情关。
+
+![选择一段记忆：13 部经典入口](../images/thirteen-classics/mainmenu.png)
 
 ## 世界观与角色设定
 
@@ -27,13 +31,11 @@
 
 「遗忘之影污染了记忆花海」这类设定，把「传承文化」这个抽象目标，翻译成了玩家看得懂、有代入感的主线剧情。
 
-## 大地图与关卡设计
+## 关卡选择与玩法设计
 
-![大地图：13 个经典节点](../images/thirteen-classics/worldmap.png)
+![走进经典：记忆节点地图](../images/thirteen-classics/map-nodes.png)
 
-进入游戏后是一张节点式大地图，13 个经典以图标形式排布。淡蓝色=可玩，灰色=占位，金色 ✓=已通关。点图标进入对应关卡。
-
-![地图节点](../images/thirteen-classics/map-nodes.png)
+进入游戏后先来到「选择一段记忆」界面，13 部经典以卡片形式排布，点击卡片进入对应关卡。
 
 关卡玩法按经典的性格量身定制，而不是千篇一律的答题：
 
@@ -54,8 +56,6 @@
 | 孟子 | 义理台 |
 
 其中 8 个「问—答—回应」式关卡继承同一个 `DialogueLevelBase` 基类，子类只需要提供「过关拼音 + 所有轮次内容」，其余流程自动复用。学诗经关卡那种自定义玩法就仿照 `ShijingLevel` 单独写。
-
-![周易关卡](../images/thirteen-classics/zhouyi.png)
 
 ## Live2D 角色的原生渲染
 

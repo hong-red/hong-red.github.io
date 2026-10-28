@@ -5,7 +5,9 @@
 ![客户端](https://img.shields.io/badge/客户端-Flutter-02569B.svg)
 ![形态](https://img.shields.io/badge/形态-PWA%20%2B%20APK-orange.svg)
 
-**后端 / 网页版**：[https://github.com/hong-red/Article-Agent-App](https://github.com/hong-red/Article-Agent-App)
+**网页版（自托管）**：[https://github.com/hong-red/Article-Agent](https://github.com/hong-red/Article-Agent)
+
+**App 版后端（托管 · 多用户）**：[https://github.com/hong-red/Article-Agent-App](https://github.com/hong-red/Article-Agent-App)
 
 **安卓客户端**：[https://github.com/hong-red/smart-elf-app](https://github.com/hong-red/smart-elf-app)
 
